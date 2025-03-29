@@ -72,29 +72,11 @@
     <Compile Include="FrmDashBoard.Designer.cs">
       <DependentUpon>FrmDashBoard.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmProductsList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmProductsList.Designer.cs">
-      <DependentUpon>FrmProductsList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmProductsAdd.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmProductsAdd.Designer.cs">
-      <DependentUpon>FrmProductsAdd.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlBaglanti.cs" />
     <EmbeddedResource Include="FrmDashBoard.resx">
       <DependentUpon>FrmDashBoard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmProductsAdd.resx">
-      <DependentUpon>FrmProductsAdd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmProductsList.resx">
-      <DependentUpon>FrmProductsList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
