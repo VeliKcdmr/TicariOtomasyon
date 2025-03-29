@@ -10,31 +10,33 @@ using System.Windows.Forms;
 
 namespace TicariOtomasyon
 {
-    public partial class FrmDashBoard : Form
+    public partial class FrmDashboard : Form
     {
-        public FrmDashBoard()
+        public FrmDashboard()
         {
             InitializeComponent();
         }
-        FrmProductsAdd frmpadd;
-        private void BtnMUrunEkle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+
+        FrmCategories frmkategori;
+        private void BtnKIslem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (frmpadd == null || frmpadd.IsDisposed)
+            if (frmkategori == null || frmkategori.IsDisposed)
             {
-                frmpadd = new FrmProductsAdd();
-                frmpadd.MdiParent = this;
-                frmpadd.Show();
+                frmkategori = new FrmCategories();
+                frmkategori.MdiParent = this;
+                frmkategori.Show();
             }
         }
-        FrmProductsList frmpl;
-        private void BtnUrunList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        FrmBrands frmmarka;
+        private void BtnMIslem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (frmpl == null || frmpl.IsDisposed)
+            if (frmmarka == null || frmmarka.IsDisposed)
             {
-                frmpl = new FrmProductsList();
-                frmpl.MdiParent = this;
-                frmpl.Show();
+                frmmarka = new FrmBrands();
+                frmmarka.MdiParent = this;
+                frmmarka.Show();
             }
+
         }
     }
 }
