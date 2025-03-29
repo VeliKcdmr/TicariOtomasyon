@@ -29,9 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery1 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProductsList));
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.colÜrünAdı = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colBarkod = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colKategori = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -44,8 +46,6 @@
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAçıklama = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEklenmeTarihi = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             this.SuspendLayout();
@@ -69,90 +69,6 @@
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowFooter = true;
             // 
-            // colÜrünAdı
-            // 
-            this.colÜrünAdı.FieldName = "Ürün Adı";
-            this.colÜrünAdı.Name = "colÜrünAdı";
-            this.colÜrünAdı.Visible = true;
-            this.colÜrünAdı.VisibleIndex = 1;
-            // 
-            // colBarkod
-            // 
-            this.colBarkod.FieldName = "Barkod";
-            this.colBarkod.Name = "colBarkod";
-            this.colBarkod.Visible = true;
-            this.colBarkod.VisibleIndex = 2;
-            // 
-            // colKategori
-            // 
-            this.colKategori.FieldName = "Kategori";
-            this.colKategori.Name = "colKategori";
-            this.colKategori.Visible = true;
-            this.colKategori.VisibleIndex = 3;
-            // 
-            // colMarka
-            // 
-            this.colMarka.FieldName = "Marka";
-            this.colMarka.Name = "colMarka";
-            this.colMarka.Visible = true;
-            this.colMarka.VisibleIndex = 4;
-            // 
-            // colModel
-            // 
-            this.colModel.FieldName = "Model";
-            this.colModel.Name = "colModel";
-            this.colModel.Visible = true;
-            this.colModel.VisibleIndex = 5;
-            // 
-            // colYıl
-            // 
-            this.colYıl.FieldName = "Yıl";
-            this.colYıl.Name = "colYıl";
-            this.colYıl.Visible = true;
-            this.colYıl.VisibleIndex = 6;
-            // 
-            // colRaf
-            // 
-            this.colRaf.FieldName = "Raf";
-            this.colRaf.Name = "colRaf";
-            this.colRaf.Visible = true;
-            this.colRaf.VisibleIndex = 7;
-            // 
-            // colTedarikçi
-            // 
-            this.colTedarikçi.FieldName = "Tedarikçi";
-            this.colTedarikçi.Name = "colTedarikçi";
-            this.colTedarikçi.Visible = true;
-            this.colTedarikçi.VisibleIndex = 8;
-            // 
-            // colStokAdeti
-            // 
-            this.colStokAdeti.FieldName = "Stok Adeti";
-            this.colStokAdeti.Name = "colStokAdeti";
-            this.colStokAdeti.Visible = true;
-            this.colStokAdeti.VisibleIndex = 9;
-            // 
-            // gridColumn1
-            // 
-            this.gridColumn1.FieldName = "Birim Fiyat (TL)";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 10;
-            // 
-            // colAçıklama
-            // 
-            this.colAçıklama.FieldName = "Açıklama";
-            this.colAçıklama.Name = "colAçıklama";
-            this.colAçıklama.Visible = true;
-            this.colAçıklama.VisibleIndex = 11;
-            // 
-            // colEklenmeTarihi
-            // 
-            this.colEklenmeTarihi.FieldName = "Eklenme Tarihi";
-            this.colEklenmeTarihi.Name = "colEklenmeTarihi";
-            this.colEklenmeTarihi.Visible = true;
-            this.colEklenmeTarihi.VisibleIndex = 12;
-            // 
             // gridControl1
             // 
             this.gridControl1.DataMember = "sp_UrunListesi";
@@ -170,11 +86,95 @@
             // 
             this.sqlDataSource1.ConnectionName = "sqlserver\\sqlexpress.ZorluMotorDB.dbo";
             this.sqlDataSource1.Name = "sqlDataSource1";
-            storedProcQuery2.Name = "sp_UrunListesi";
-            storedProcQuery2.StoredProcName = "sp_UrunListesi";
+            storedProcQuery1.Name = "sp_UrunListesi";
+            storedProcQuery1.StoredProcName = "sp_UrunListesi";
             this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            storedProcQuery2});
+            storedProcQuery1});
             this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
+            // 
+            // colÜrünAdı
+            // 
+            this.colÜrünAdı.FieldName = "Ürün Adı";
+            this.colÜrünAdı.Name = "colÜrünAdı";
+            this.colÜrünAdı.Visible = true;
+            this.colÜrünAdı.VisibleIndex = 0;
+            // 
+            // colBarkod
+            // 
+            this.colBarkod.FieldName = "Barkod";
+            this.colBarkod.Name = "colBarkod";
+            this.colBarkod.Visible = true;
+            this.colBarkod.VisibleIndex = 1;
+            // 
+            // colKategori
+            // 
+            this.colKategori.FieldName = "Kategori";
+            this.colKategori.Name = "colKategori";
+            this.colKategori.Visible = true;
+            this.colKategori.VisibleIndex = 2;
+            // 
+            // colMarka
+            // 
+            this.colMarka.FieldName = "Marka";
+            this.colMarka.Name = "colMarka";
+            this.colMarka.Visible = true;
+            this.colMarka.VisibleIndex = 3;
+            // 
+            // colModel
+            // 
+            this.colModel.FieldName = "Model";
+            this.colModel.Name = "colModel";
+            this.colModel.Visible = true;
+            this.colModel.VisibleIndex = 4;
+            // 
+            // colYıl
+            // 
+            this.colYıl.FieldName = "Yıl";
+            this.colYıl.Name = "colYıl";
+            this.colYıl.Visible = true;
+            this.colYıl.VisibleIndex = 5;
+            // 
+            // colRaf
+            // 
+            this.colRaf.FieldName = "Raf";
+            this.colRaf.Name = "colRaf";
+            this.colRaf.Visible = true;
+            this.colRaf.VisibleIndex = 6;
+            // 
+            // colTedarikçi
+            // 
+            this.colTedarikçi.FieldName = "Tedarikçi";
+            this.colTedarikçi.Name = "colTedarikçi";
+            this.colTedarikçi.Visible = true;
+            this.colTedarikçi.VisibleIndex = 7;
+            // 
+            // colStokAdeti
+            // 
+            this.colStokAdeti.FieldName = "Stok Adeti";
+            this.colStokAdeti.Name = "colStokAdeti";
+            this.colStokAdeti.Visible = true;
+            this.colStokAdeti.VisibleIndex = 8;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.FieldName = "Birim Fiyat (TL)";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 9;
+            // 
+            // colAçıklama
+            // 
+            this.colAçıklama.FieldName = "Açıklama";
+            this.colAçıklama.Name = "colAçıklama";
+            this.colAçıklama.Visible = true;
+            this.colAçıklama.VisibleIndex = 10;
+            // 
+            // colEklenmeTarihi
+            // 
+            this.colEklenmeTarihi.FieldName = "Eklenme Tarihi";
+            this.colEklenmeTarihi.Name = "colEklenmeTarihi";
+            this.colEklenmeTarihi.Visible = true;
+            this.colEklenmeTarihi.VisibleIndex = 11;
             // 
             // FrmProductsList
             // 
